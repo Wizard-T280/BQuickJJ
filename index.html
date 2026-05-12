@@ -64,6 +64,16 @@
             color: var(--green);
             font-weight: 900;
         }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+            
 
         .nav-links {
             display: flex;
@@ -791,7 +801,9 @@
 
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo" onclick="navigateTo('home')">B<span>Quick</span>JJ</a>
+        <a href="#" class="logo" onclick="navigateTo('home')">
+            <img src="logo_img.jpg" alt="BQuickJJ" style="height: 45px;">
+        </a>
         <ul class="nav-links">
             <li><a onclick="navigateTo('home')" class="active" data-page="home">Home</a></li>
             <li><a onclick="navigateTo('about')" data-page="about">About</a></li>
