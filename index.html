@@ -8,10 +8,9 @@
         :root {
             --black: #0a0a0a;
             --black-alt: #141414;
-            --green: #00cc55;
-            --green-glow: rgba(0, 204, 85, 0.3);
             --blue: #1a6fff;
             --blue-light: #00aaff;
+            --blue-glow: rgba(26, 111, 255, 0.3);
             --white: #ffffff;
             --gray: #999999;
             --gray-dark: #333333;
@@ -49,31 +48,12 @@
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             padding: 0.8rem 2rem;
-            border-bottom: 2px solid var(--green);
+            border-bottom: 2px solid var(--blue);
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            color: var(--white);
             text-decoration: none;
-            text-transform: uppercase;
         }
-        .logo span {
-            color: var(--green);
-            font-weight: 900;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            color: var(--white);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-            
 
         .nav-links {
             display: flex;
@@ -94,7 +74,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: var(--green);
+            color: var(--blue);
         }
 
         .nav-links a::after {
@@ -104,7 +84,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--green);
+            background: var(--blue);
             transition: width 0.3s;
         }
 
@@ -123,9 +103,9 @@
         }
 
         .nav-cta:hover {
-            background: var(--green) !important;
+            background: var(--blue-light) !important;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--green-glow);
+            box-shadow: 0 8px 25px var(--blue-glow);
         }
         .nav-cta::after {
             display: none !important;
@@ -154,6 +134,17 @@
             overflow: hidden;
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.75);
+            z-index: 1;
+        }
+
         .hero-watermark {
             position: absolute;
             font-size: 25rem;
@@ -165,6 +156,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             line-height: 1;
+            z-index: 2;
         }
 
         .hero-content {
@@ -182,18 +174,19 @@
             letter-spacing: -2px;
             margin-bottom: 1rem;
         }
-        .hero h1 .green {
-            color: var(--green);
-        }
         .hero h1 .blue {
+            color: var(--blue);
+        }
+        .hero h1 .blue-light {
             color: var(--blue-light);
         }
 
         .hero-subtitle {
             font-size: 1.4rem;
-            color: var(--gray);
+            color: var(--white);
             margin-bottom: 2.5rem;
             font-weight: 400;
+            opacity: 0.9;
         }
 
         .hero-stats {
@@ -209,15 +202,16 @@
         .stat-number {
             font-size: 3.5rem;
             font-weight: 900;
-            color: var(--green);
+            color: var(--blue);
             line-height: 1;
         }
         .stat-label {
             font-size: 0.9rem;
-            color: var(--gray);
+            color: var(--white);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0.3rem;
+            opacity: 0.7;
         }
 
         .hero-cta {
@@ -236,9 +230,9 @@
             cursor: pointer;
         }
         .hero-cta:hover {
-            background: var(--green);
+            background: var(--blue-light);
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px var(--green-glow);
+            box-shadow: 0 12px 40px var(--blue-glow);
         }
 
         .hero-wave {
@@ -246,6 +240,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
+            z-index: 3;
         }
         .hero-wave svg {
             display: block;
@@ -270,7 +265,7 @@
         }
 
         .section-eyebrow {
-            color: var(--green);
+            color: var(--blue);
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 700;
@@ -311,9 +306,9 @@
             overflow: hidden;
         }
         .program-card:hover {
-            border-color: var(--green);
+            border-color: var(--blue);
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 204, 85, 0.15);
+            box-shadow: 0 20px 50px rgba(26, 111, 255, 0.15);
         }
         .program-card::before {
             content: '';
@@ -322,7 +317,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--green);
+            background: var(--blue);
             transform: scaleX(0);
             transition: transform 0.4s;
             transform-origin: left;
@@ -346,7 +341,7 @@
             margin-bottom: 1.5rem;
         }
         .program-card .program-link {
-            color: var(--green);
+            color: var(--blue);
             font-weight: 700;
             text-decoration: none;
             cursor: pointer;
@@ -363,12 +358,12 @@
             margin-top: 2rem;
         }
         .schedule-table th {
-            color: var(--green);
+            color: var(--blue);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 0.85rem;
             padding: 1rem;
-            border-bottom: 2px solid var(--green);
+            border-bottom: 2px solid var(--blue);
             text-align: left;
         }
         .schedule-table td {
@@ -376,15 +371,15 @@
             border-bottom: 1px solid var(--gray-dark);
         }
         .schedule-table .gi-class {
-            color: var(--green);
-            font-weight: 700;
-        }
-        .schedule-table .kids-class {
             color: var(--blue);
             font-weight: 700;
         }
-        .schedule-table .nogi-class {
+        .schedule-table .kids-class {
             color: var(--blue-light);
+            font-weight: 700;
+        }
+        .schedule-table .nogi-class {
+            color: var(--white);
             font-weight: 700;
         }
 
@@ -474,9 +469,9 @@
             cursor: pointer;
         }
         .cta-btn:hover {
-            background: var(--green);
+            background: var(--blue-light);
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px var(--green-glow);
+            box-shadow: 0 12px 40px var(--blue-glow);
         }
 
         /* About Page */
@@ -484,7 +479,7 @@
             background: var(--black-alt);
             padding: 4rem 2rem;
             text-align: center;
-            border-bottom: 2px solid var(--green);
+            border-bottom: 2px solid var(--blue);
         }
         .about-hero h1 {
             font-size: 4rem;
@@ -492,8 +487,8 @@
             text-transform: uppercase;
             letter-spacing: -1px;
         }
-        .about-hero h1 .green {
-            color: var(--green);
+        .about-hero h1 .blue {
+            color: var(--blue);
         }
 
         .about-grid {
@@ -513,7 +508,7 @@
             height: 500px;
             background: var(--gray-dark);
             border-radius: 8px;
-            border: 2px solid var(--green);
+            border: 2px solid var(--blue);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -526,7 +521,7 @@
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 2rem;
-            border-left: 4px solid var(--green);
+            border-left: 4px solid var(--blue);
             padding-left: 1.5rem;
         }
 
@@ -542,7 +537,7 @@
         }
         .checklist li::before {
             content: '✓';
-            color: var(--green);
+            color: var(--blue);
             font-weight: 900;
             font-size: 1.3rem;
         }
@@ -563,9 +558,9 @@
             position: relative;
         }
         .pricing-card.featured {
-            border-color: var(--green);
+            border-color: var(--blue);
             transform: scale(1.03);
-            box-shadow: 0 0 30px var(--green-glow);
+            box-shadow: 0 0 30px var(--blue-glow);
         }
         .pricing-card.featured::after {
             content: 'BEST VALUE';
@@ -573,8 +568,8 @@
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--green);
-            color: var(--black);
+            background: var(--blue);
+            color: var(--white);
             padding: 0.3rem 1.5rem;
             font-size: 0.8rem;
             font-weight: 900;
@@ -589,7 +584,7 @@
         .pricing-card .price {
             font-size: 3.5rem;
             font-weight: 900;
-            color: var(--green);
+            color: var(--blue);
             line-height: 1;
             margin: 1.5rem 0;
         }
@@ -612,7 +607,7 @@
         }
         .pricing-card ul li::before {
             content: '✓';
-            color: var(--green);
+            color: var(--blue);
             font-weight: 900;
         }
 
@@ -632,10 +627,10 @@
             width: 100%;
         }
         .pricing-btn:hover {
-            background: var(--green);
+            background: var(--blue-light);
         }
         .pricing-card.featured .pricing-btn {
-            background: var(--green);
+            background: var(--blue-light);
         }
         .pricing-card.featured .pricing-btn:hover {
             background: var(--blue);
@@ -707,7 +702,7 @@
             height: 350px;
             background: var(--gray-dark);
             border-radius: 8px;
-            border: 2px solid var(--green);
+            border: 2px solid var(--blue);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -730,7 +725,7 @@
             margin-bottom: 1rem;
         }
         footer .footer-logo span {
-            color: var(--green);
+            color: var(--blue);
         }
         footer .footer-links {
             list-style: none;
@@ -747,7 +742,7 @@
             transition: color 0.2s;
         }
         footer .footer-links a:hover {
-            color: var(--green);
+            color: var(--blue);
         }
 
         /* Responsive */
@@ -822,8 +817,8 @@
             <div class="hero-watermark">BQ</div>
             <div class="hero-content fade-in">
                 <h1>
-                    <span class="green">BQuickJJ</span><br>
-                    <span class="blue">Palmetto, FL</span>
+                    <span class="blue">BQuickJJ</span><br>
+                    <span class="blue-light">Palmetto, FL</span>
                 </h1>
                 <p class="hero-subtitle">
                     Train with a 3rd Degree Black Belt • Army Combat Veteran • UFC Fighter Coach
@@ -957,7 +952,7 @@
     <div class="page" id="page-about">
         <section class="about-hero">
             <div class="container">
-                <h1>About <span class="green">Coach Quick</span></h1>
+                <h1>About <span class="blue">Coach Quick</span></h1>
                 <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">The most experienced MMA and Jiu-Jitsu instructor in the area.</p>
             </div>
         </section>
@@ -1014,7 +1009,7 @@
     <div class="page" id="page-programs">
         <section class="about-hero">
             <div class="container">
-                <h1>Our <span class="green">Programs</span></h1>
+                <h1>Our <span class="blue">Programs</span></h1>
                 <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Structured training for every age and skill level.</p>
             </div>
         </section>
@@ -1067,60 +1062,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Monday</td>
-                            <td>5:00 PM - 6:15 PM</td>
-                            <td>Youth Jiu-Jitsu</td>
-                            <td class="kids-class">Kids</td>
-                        </tr>
-                        <tr>
-                            <td>Monday</td>
-                            <td>6:15 PM - 7:30 PM</td>
-                            <td>Adult Fundamentals</td>
-                            <td class="gi-class">Gi</td>
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td>
-                            <td>5:00 PM - 6:15 PM</td>
-                            <td>Youth Jiu-Jitsu</td>
-                            <td class="kids-class">Kids</td>
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td>
-                            <td>6:15 PM - 7:30 PM</td>
-                            <td>Adult Fundamentals</td>
-                            <td class="gi-class">Gi</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td>
-                            <td>5:00 PM - 6:15 PM</td>
-                            <td>Youth Jiu-Jitsu</td>
-                            <td class="kids-class">Kids</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td>
-                            <td>6:15 PM - 7:30 PM</td>
-                            <td>Adult Fundamentals</td>
-                            <td class="gi-class">Gi</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td>
-                            <td>5:00 PM - 6:15 PM</td>
-                            <td>Youth Jiu-Jitsu</td>
-                            <td class="kids-class">Kids</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td>
-                            <td>6:15 PM - 7:30 PM</td>
-                            <td>Adult Fundamentals</td>
-                            <td class="gi-class">Gi</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday</td>
-                            <td>10:00 AM - 11:30 AM</td>
-                            <td>Open Mat / Comp Training</td>
-                            <td class="nogi-class">No-Gi</td>
-                        </tr>
+                        <tr><td>Monday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Monday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Tuesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Tuesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Wednesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Wednesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Thursday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Thursday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Saturday</td><td>10:00 AM - 11:30 AM</td><td>Open Mat / Comp Training</td><td class="nogi-class">No-Gi</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1131,7 +1081,7 @@
     <div class="page" id="page-affiliates">
         <section class="about-hero">
             <div class="container">
-                <h1>Our <span class="green">Network</span></h1>
+                <h1>Our <span class="blue">Network</span></h1>
                 <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">25 black belts and schools worldwide — united under the BQuickJJ banner.</p>
             </div>
         </section>
@@ -1146,44 +1096,15 @@
                 </p>
 
                 <div class="affiliates-grid" style="margin-top: 3rem;">
-                    <!-- US Affiliates -->
-                    <div class="affiliate-card">
-                        <h4>Dallas, TX</h4>
-                        <p>Flagship Affiliate</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Fort Worth, TX</h4>
-                        <p>Affiliate School</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Palmetto, FL</h4>
-                        <p>Headquarters</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Houston, TX</h4>
-                        <p>Affiliate School</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Austin, TX</h4>
-                        <p>Affiliate School</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Las Vegas, NV</h4>
-                        <p>Affiliate School</p>
-                    </div>
-                    <!-- International -->
-                    <div class="affiliate-card">
-                        <h4>Brussels, Belgium</h4>
-                        <p>International Affiliate</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Port of Spain, Trinidad</h4>
-                        <p>International Affiliate</p>
-                    </div>
-                    <div class="affiliate-card">
-                        <h4>Lisbon, Portugal</h4>
-                        <p>International Affiliate</p>
-                    </div>
+                    <div class="affiliate-card"><h4>Dallas, TX</h4><p>Flagship Affiliate</p></div>
+                    <div class="affiliate-card"><h4>Fort Worth, TX</h4><p>Affiliate School</p></div>
+                    <div class="affiliate-card"><h4>Palmetto, FL</h4><p>Headquarters</p></div>
+                    <div class="affiliate-card"><h4>Houston, TX</h4><p>Affiliate School</p></div>
+                    <div class="affiliate-card"><h4>Austin, TX</h4><p>Affiliate School</p></div>
+                    <div class="affiliate-card"><h4>Las Vegas, NV</h4><p>Affiliate School</p></div>
+                    <div class="affiliate-card"><h4>Brussels, Belgium</h4><p>International Affiliate</p></div>
+                    <div class="affiliate-card"><h4>Port of Spain, Trinidad</h4><p>International Affiliate</p></div>
+                    <div class="affiliate-card"><h4>Lisbon, Portugal</h4><p>International Affiliate</p></div>
                 </div>
 
                 <div style="margin-top: 4rem; text-align: center;">
@@ -1203,7 +1124,7 @@
     <div class="page" id="page-pricing">
         <section class="about-hero">
             <div class="container">
-                <h1>Membership <span class="green">Pricing</span></h1>
+                <h1>Membership <span class="blue">Pricing</span></h1>
                 <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Simple, transparent pricing. No hidden fees. No contracts.</p>
             </div>
         </section>
@@ -1254,13 +1175,13 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--black-alt); border-radius: 8px; border: 2px solid var(--green); text-align: center;">
+                <div style="margin-top: 3rem; padding: 2rem; background: var(--black-alt); border-radius: 8px; border: 2px solid var(--blue); text-align: center;">
                     <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Heroes Discount</h3>
                     <p style="color: var(--gray); font-size: 1.1rem;">
                         <strong style="color: var(--white);">$50 OFF</strong> for Law Enforcement, Military, and First Responders
                     </p>
                     <p style="color: var(--gray); margin-top: 0.5rem;">
-                        <strong style="color: var(--green);">$50 OFF</strong> for each additional family member ($125/month)
+                        <strong style="color: var(--blue);">$50 OFF</strong> for each additional family member ($125/month)
                     </p>
                 </div>
             </div>
@@ -1271,7 +1192,7 @@
     <div class="page" id="page-contact">
         <section class="about-hero">
             <div class="container">
-                <h1>Get <span class="green">Started</span></h1>
+                <h1>Get <span class="blue">Started</span></h1>
                 <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Your first class is free. Come see what we're about.</p>
             </div>
         </section>
@@ -1311,7 +1232,7 @@
                                 <strong>Class Hours</strong>
                                 Mon-Thu: 5:00 PM - 7:30 PM<br>
                                 Sat: 10:00 AM - 11:30 AM<br>
-                                <span style="color: var(--green); font-weight: 600;">First class is always FREE</span>
+                                <span style="color: var(--blue); font-weight: 600;">First class is always FREE</span>
                             </div>
                         </div>
                         <div style="margin-top: 2rem;">
@@ -1344,22 +1265,20 @@
             <li><a onclick="navigateTo('pricing')">Pricing</a></li>
             <li><a onclick="navigateTo('contact')">Contact</a></li>
         </ul>
-        <p style="font-size: 0.85rem;">&copy; 2024 BQuickJJ. All rights reserved.</p>
+        <p style="font-size: 0.85rem;">&copy; 2026 BQuickJJ. All rights reserved.</p>
         <p style="font-size: 0.8rem; margin-top: 0.5rem;">
-            <a href="#" style="color: var(--green);">BJJFanatics: Half Guard</a> • 
-            <a href="#" style="color: var(--green);">Fade to Black 2</a> • 
-            <a href="#" style="color: var(--green);">Budovideos: Fade to Black 1</a> • 
-            <a href="#" style="color: var(--green);">YouTube Channel</a>
+            <a href="#" style="color: var(--blue);">BJJFanatics: Half Guard</a> • 
+            <a href="#" style="color: var(--blue);">Fade to Black 2</a> • 
+            <a href="#" style="color: var(--blue);">Budovideos: Fade to Black 1</a> • 
+            <a href="#" style="color: var(--blue);">YouTube Channel</a>
         </p>
     </footer>
 
     <script>
-        // Navigation
         const nav = document.getElementById('navbar');
         const pages = document.querySelectorAll('.page');
         const navLinks = document.querySelectorAll('.nav-links a[data-page]');
 
-        // Scroll effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
@@ -1368,33 +1287,22 @@
             }
         });
 
-        // Page navigation
         function navigateTo(pageName) {
-            // Hide all pages
             pages.forEach(page => page.classList.remove('active'));
-
-            // Show selected page
             const targetPage = document.getElementById('page-' + pageName);
             if (targetPage) {
                 targetPage.classList.add('active');
             }
-
-            // Update nav active states
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('data-page') === pageName) {
                     link.classList.add('active');
                 }
             });
-
-            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Update URL hash
             window.location.hash = pageName;
         }
 
-        // Handle browser back/forward
         window.addEventListener('hashchange', () => {
             const hash = window.location.hash.replace('#', '');
             if (hash && document.getElementById('page-' + hash)) {
@@ -1402,7 +1310,6 @@
             }
         });
 
-        // Load initial page from hash
         if (window.location.hash) {
             const initialPage = window.location.hash.replace('#', '');
             if (document.getElementById('page-' + initialPage)) {
@@ -1410,7 +1317,6 @@
             }
         }
 
-        // Handle CTA clicks that target #trial
         document.querySelectorAll('a[href="#trial"]').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
