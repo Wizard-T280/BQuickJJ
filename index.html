@@ -30,6 +30,7 @@
             overflow-x: hidden;
         }
 
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -110,6 +111,7 @@
             display: none !important;
         }
 
+        /* Pages */
         .page {
             display: none;
             min-height: 100vh;
@@ -119,6 +121,7 @@
             display: block;
         }
 
+        /* HERO - Home Page */
         .hero {
             height: 100vh;
             display: flex;
@@ -140,6 +143,20 @@
             height: 100%;
             background: rgba(10, 10, 10, 0.75);
             z-index: 1;
+        }
+
+        .hero-watermark {
+            position: absolute;
+            font-size: 25rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+            user-select: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 1;
+            z-index: 2;
         }
 
         .hero-content {
@@ -231,6 +248,7 @@
             height: auto;
         }
 
+        /* Section Styles */
         .section {
             padding: 6rem 2rem;
         }
@@ -271,6 +289,7 @@
             margin-bottom: 3rem;
         }
 
+        /* Program Cards */
         .programs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -310,7 +329,7 @@
         .program-icon {
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            object-fit: cover;   /* crops instead of squishing */
             border-radius: 6px;
             margin-bottom: 1.5rem;
             display: block;
@@ -336,6 +355,7 @@
             color: var(--blue-light);
         }
 
+        /* Schedule Table */
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
@@ -367,6 +387,7 @@
             font-weight: 700;
         }
 
+        /* Instructor Cards */
         .instructors-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -416,6 +437,7 @@
             font-size: 0.95rem;
         }
 
+        /* CTA Section */
         .cta-section {
             text-align: center;
             padding: 6rem 2rem;
@@ -456,6 +478,7 @@
             box-shadow: 0 12px 40px var(--blue-glow);
         }
 
+        /* About Page */
         .about-hero {
             background: var(--black-alt);
             padding: 4rem 2rem;
@@ -523,6 +546,7 @@
             font-size: 1.3rem;
         }
 
+        /* Pricing Cards */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -616,6 +640,7 @@
             background: var(--blue);
         }
 
+        /* Affiliates Grid */
         .affiliates-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -642,6 +667,7 @@
             font-size: 0.9rem;
         }
 
+        /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -688,14 +714,7 @@
             font-size: 1.2rem;
         }
 
-        .gymdesk-iframe {
-            width: 100%;
-            border: none;
-            border-radius: 8px;
-            background: #0a0a0a;
-            min-height: 700px;
-        }
-
+        /* Footer */
         footer {
             background: var(--black);
             border-top: 2px solid var(--gray-dark);
@@ -730,6 +749,7 @@
             color: var(--blue);
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 3rem;
@@ -758,11 +778,9 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-            .gymdesk-iframe {
-                min-height: 500px;
-            }
         }
 
+        /* Fade-in animation */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -780,6 +798,7 @@
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav id="navbar">
         <a href="#" class="logo" onclick="navigateTo('home')">
             <img src="logo_img.png" alt="BQuickJJ" style="height: 45px;">
@@ -795,7 +814,9 @@
         </ul>
     </nav>
 
+    <!-- HOME PAGE -->
     <div class="page active" id="page-home">
+        <!-- Hero -->
         <section class="hero">
             <div class="hero-content fade-in">
                 <h1>
@@ -823,11 +844,12 @@
             </div>
             <div class="hero-wave">
                 <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#0a0a0a" />
+                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#141414" />
                 </svg>
             </div>
         </section>
 
+        <!-- Programs Overview -->
         <section class="section section-dark" id="home-programs">
             <div class="container">
                 <span class="section-eyebrow">What We Offer</span>
@@ -835,25 +857,25 @@
                 <p class="section-subtitle">From youth beginners to professional fighters — we have a program designed for you.</p>
                 <div class="programs-grid">
                     <div class="program-card">
-                        <img src="kids1.png" alt="Youth Jiu-Jitsu" class="program-icon">
+                        <img src="kids1.png" alt="Youth Jiu-Jitsu" class ="program-icon">
                         <h3>Youth Jiu-Jitsu</h3>
                         <p>Ages 4-12. The longest youth classes in Tampa Bay, taught by a 3rd degree black belt. Building confidence, discipline, and real self-defense skills.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="fundamentals2.png" alt="Adult Fundamentals" class="program-icon">
+                        <img src="fundamentals2.png" alt="Adult Fundamentals" class ="program-icon">
                         <h3>Adult Fundamentals</h3>
                         <p>Ages 13+. A 12-month cyclical curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. All ranks welcome.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="advanced.jpg" alt="Advanced Training" class="program-icon">
+                        <img src="advanced.jpg" alt="Advanced Training" class ="program-icon">
                         <h3>Advanced Training</h3>
                         <p>For students who've completed the Fundamentals curriculum. Competition preparation and advanced techniques.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="placeholder.jpg" alt="Private Lessons" class="program-icon">
+                        <img src="placeholder.jpg" alt="Private Lessons" class ="program-icon">
                         <h3>Private Lessons</h3>
                         <p>One-on-one training with Coach Quick. Accelerate your progress with personalized instruction.</p>
                         <a class="program-link" onclick="navigateTo('contact')">Inquire →</a>
@@ -862,6 +884,45 @@
             </div>
         </section>
 
+        <!-- Schedule Preview -->
+        <section class="section section-black">
+            <div class="container">
+                <span class="section-eyebrow">Training Schedule</span>
+                <h2 class="section-title">Weekly Classes</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mon - Thu</td>
+                            <td>5:00 PM - 6:15 PM</td>
+                            <td>Youth Jiu-Jitsu (4-12 yrs)</td>
+                            <td class="kids-class">Kids</td>
+                        </tr>
+                        <tr>
+                            <td>Mon - Thu</td>
+                            <td>6:15 PM - 7:30 PM</td>
+                            <td>Adult Fundamentals (13+)</td>
+                            <td class="gi-class">Gi</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>10:00 AM - 11:30 AM</td>
+                            <td>Open Mat / Competition Training</td>
+                            <td class="nogi-class">No-Gi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Instructor Tease -->
         <section class="section section-dark" id="home-instructors">
             <div class="container">
                 <span class="section-eyebrow">Meet Your Coach</span>
@@ -880,15 +941,17 @@
             </div>
         </section>
 
+        <!-- CTA -->
         <section class="cta-section">
             <div class="container">
                 <h2>Ready to Start Your Journey?</h2>
-                <p>Join the most experienced Jiu-Jitsu academy in Southwest Florida.</p>
-                <a href="#trial" class="cta-btn" onclick="navigateTo('contact')">Get Started Today</a>
+                <p>First class is on us. Come see why BQuickJJ is Southwest Florida's premier Jiu-Jitsu academy.</p>
+                <a href="#trial" class="cta-btn" onclick="navigateTo('contact')">Claim Your Free Trial</a>
             </div>
         </section>
     </div>
 
+    <!-- ABOUT PAGE -->
     <div class="page" id="page-about">
         <section class="about-hero">
             <div class="container">
@@ -928,10 +991,10 @@
                 <h2 class="section-title">Beyond Sport Jiu-Jitsu</h2>
                 <p class="section-subtitle">At BQuickJJ, we honor the roots of Jiu-Jitsu as a martial art for self-defense. While competition builds character and tests skill, our foundation is practical, real-world application.</p>
                 <p style="color: var(--gray); max-width: 800px; margin-bottom: 2rem;">
-                    As a combat veteran, Coach Quick understands what works under pressure. Every technique taught is pressure-tested and grounded in reality.
+                    As a combat veteran, Coach Quick understands what works under pressure. Every technique taught is pressure-tested and grounded in reality — whether you're a 4-year-old building confidence, a hobbyist getting in shape, or a professional fighter preparing for the cage.
                 </p>
                 <p style="color: var(--gray); max-width: 800px;">
-                    The 12-month cyclical Fundamentals Curriculum ensures every student builds a complete foundation.
+                    The 12-month cyclical Fundamentals Curriculum ensures every student builds a complete foundation. This isn't a random collection of techniques — it's a structured program designed to take you from beginner to competent grappler, with the option to progress into advanced training.
                 </p>
             </div>
         </section>
@@ -945,6 +1008,7 @@
         </section>
     </div>
 
+    <!-- PROGRAMS PAGE -->
     <div class="page" id="page-programs">
         <section class="about-hero">
             <div class="container">
@@ -968,7 +1032,8 @@
                         <div class="program-icon">🥋</div>
                         <h3>Adult Jiu-Jitsu Fundamentals</h3>
                         <p><strong>Ages 13+ • All Levels</strong></p>
-                        <p style="margin-top: 1rem;">The first 12 months follow a structured Fundamentals Curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense.</p>
+                        <p style="margin-top: 1rem;">The first 12 months follow a structured Fundamentals Curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. This is a 12-month cyclical program for beginners, but all ranks are welcome.</p>
+                        <p>After completing 12 months, students can comprehend basic Jiu-Jitsu movements, handle an opponent throwing strikes, and progress to advanced classes.</p>
                         <p><strong>Schedule:</strong> Mon-Thu, 6:15-7:30 PM</p>
                         <p><strong>Pricing:</strong> $175/month unlimited training</p>
                     </div>
@@ -976,20 +1041,46 @@
                         <div class="program-icon">⚔️</div>
                         <h3>Advanced / Competition Training</h3>
                         <p><strong>By Invitation</strong></p>
-                        <p style="margin-top: 1rem;">For students who've completed the Fundamentals curriculum. Advanced techniques, competition preparation, and specialized training.</p>
+                        <p style="margin-top: 1rem;">For students who've completed the Fundamentals curriculum. Advanced techniques, competition preparation, and specialized training for those ready to take the next step.</p>
+                        <p>Competition tests one's ability in a safe, controlled environment and creates lifelong positive health habits and experiences.</p>
                     </div>
                     <div class="program-card">
                         <div class="program-icon">👤</div>
                         <h3>Private Lessons</h3>
                         <p><strong>All Ages & Levels</strong></p>
-                        <p style="margin-top: 1rem;">Accelerate your progress with one-on-one instruction from Coach Quick.</p>
+                        <p style="margin-top: 1rem;">Accelerate your progress with one-on-one instruction from Coach Quick. Perfect for addressing specific weaknesses, preparing for competition, or getting up to speed quickly.</p>
                         <p style="margin-top: 1rem;"><a class="program-link" onclick="navigateTo('contact')">Contact for availability & pricing →</a></p>
                     </div>
                 </div>
+
+                <span class="section-eyebrow">Weekly Schedule</span>
+                <h2 class="section-title" style="margin-bottom: 1rem;">Class Times</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Monday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Monday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Tuesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Tuesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Wednesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Wednesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Thursday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
+                        <tr><td>Thursday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
+                        <tr><td>Saturday</td><td>10:00 AM - 11:30 AM</td><td>Open Mat / Comp Training</td><td class="nogi-class">No-Gi</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </div>
 
+    <!-- AFFILIATES PAGE -->
     <div class="page" id="page-affiliates">
         <section class="about-hero">
             <div class="container">
@@ -1003,8 +1094,10 @@
                 <span class="section-eyebrow">Global Reach</span>
                 <h2 class="section-title">BQuickJJ Affiliates</h2>
                 <p class="section-subtitle">
-                    Coach Quick has 25 black belts and affiliated schools across the United States, Belgium, Trinidad &amp; Tobago, and Portugal.
+                    Coach Quick has 25 black belts and affiliated schools across the United States, Belgium, Trinidad &amp; Tobago, and Portugal. 
+                    Four of those black belts went through all of the kids ranks and adult ranks with Mr. Quick — two went on to fight MMA, and two wrestled collegiately.
                 </p>
+
                 <div class="affiliates-grid" style="margin-top: 3rem;">
                     <div class="affiliate-card"><h4>Dallas, TX</h4><p>Flagship Affiliate</p></div>
                     <div class="affiliate-card"><h4>Fort Worth, TX</h4><p>Affiliate School</p></div>
@@ -1016,11 +1109,13 @@
                     <div class="affiliate-card"><h4>Port of Spain, Trinidad</h4><p>International Affiliate</p></div>
                     <div class="affiliate-card"><h4>Lisbon, Portugal</h4><p>International Affiliate</p></div>
                 </div>
+
                 <div style="margin-top: 4rem; text-align: center;">
                     <span class="section-eyebrow">American Grappling Federation</span>
                     <h2 class="section-title" style="margin-bottom: 1rem;">100+ Tournaments Per Year</h2>
                     <p style="color: var(--gray); max-width: 700px; margin: 0 auto 2rem;">
                         Coach Quick is co-owner of the American Grappling Federation, which conducts over 100 Jiu-Jitsu tournaments annually across the U.S. and Europe.
+                        BQuickJJ students have regular opportunities to test their skills in a safe, controlled competitive environment.
                     </p>
                     <a href="#" class="cta-btn" style="display: inline-block;">Visit AGF Website</a>
                 </div>
@@ -1028,6 +1123,7 @@
         </section>
     </div>
 
+    <!-- PRICING PAGE -->
     <div class="page" id="page-pricing">
         <section class="about-hero">
             <div class="container">
@@ -1052,6 +1148,7 @@
                         </ul>
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
+
                     <div class="pricing-card featured">
                         <h3>Adult Fundamentals</h3>
                         <p style="color: var(--gray);">Ages 13+</p>
@@ -1065,6 +1162,7 @@
                         </ul>
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
+
                     <div class="pricing-card">
                         <h3>Family Plan</h3>
                         <p style="color: var(--gray);">Best for families</p>
@@ -1079,6 +1177,7 @@
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
                 </div>
+
                 <div style="margin-top: 3rem; padding: 2rem; background: var(--black-alt); border-radius: 8px; border: 2px solid var(--blue); text-align: center;">
                     <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Heroes Discount</h3>
                     <p style="color: var(--gray); font-size: 1.1rem;">
@@ -1092,6 +1191,7 @@
         </section>
     </div>
 
+    <!-- CONTACT PAGE -->
     <div class="page" id="page-contact">
         <section class="about-hero">
             <div class="container">
@@ -1110,14 +1210,16 @@
                             <div class="contact-detail">
                                 <strong>Address</strong>
                                 BQuickJJ<br>
-                                5304 U.S. Hwy 41, Palmetto, FL 34221
+                                5304 U.S. Hwy 41, Palmetto, FL 34221<br>
+                                <span style="color: var(--gray);">(Full address coming soon)</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📞</div>
                             <div class="contact-detail">
                                 <strong>Phone</strong>
-                                (555) 123-4567
+                                (555) 123-4567<br>
+                                <span style="color: var(--gray);">Call or text for fastest response</span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1154,21 +1256,7 @@
         </section>
     </div>
 
-    <!-- Gymdesk Iframe - always visible -->
-    <section id="gymdesk-section" class="section section-dark">
-        <div class="container">
-            <span class="section-eyebrow">Weekly Schedule</span>
-            <h2 class="section-title">Class Times</h2>
-            <iframe 
-                src="https://gymdesk.com/widgets/schedule/6aZaP?visible_schedule=all&default_schedule=all&program=all"
-                class="gymdesk-iframe"
-                height="700"
-                loading="lazy"
-                title="BQuickJJ Class Schedule">
-            </iframe>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <div class="footer-logo">B<span>Quick</span>JJ</div>
         <p style="margin-bottom: 0.5rem;">Palmetto, FL • Southwest Florida's Premier Jiu-Jitsu Academy</p>
