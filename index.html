@@ -145,20 +145,6 @@
             z-index: 1;
         }
 
-        .hero-watermark {
-            position: absolute;
-            font-size: 25rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.02);
-            pointer-events: none;
-            user-select: none;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            line-height: 1;
-            z-index: 2;
-        }
-
         .hero-content {
             text-align: center;
             z-index: 2;
@@ -355,7 +341,7 @@
             color: var(--blue-light);
         }
 
-        /* Schedule Table (fallback) */
+        /* Schedule Table */
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
@@ -824,7 +810,6 @@
 
     <!-- HOME PAGE -->
     <div class="page active" id="page-home">
-        <!-- Hero -->
         <section class="hero">
             <div class="hero-content fade-in">
                 <h1>
@@ -852,12 +837,11 @@
             </div>
             <div class="hero-wave">
                 <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#141414" />
+                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#0a0a0a" />
                 </svg>
             </div>
         </section>
 
-        <!-- Programs Overview -->
         <section class="section section-dark" id="home-programs">
             <div class="container">
                 <span class="section-eyebrow">What We Offer</span>
@@ -865,25 +849,25 @@
                 <p class="section-subtitle">From youth beginners to professional fighters — we have a program designed for you.</p>
                 <div class="programs-grid">
                     <div class="program-card">
-                        <img src="kids1.png" alt="Youth Jiu-Jitsu" class ="program-icon">
+                        <img src="kids1.png" alt="Youth Jiu-Jitsu" class="program-icon">
                         <h3>Youth Jiu-Jitsu</h3>
                         <p>Ages 4-12. The longest youth classes in Tampa Bay, taught by a 3rd degree black belt. Building confidence, discipline, and real self-defense skills.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="fundamentals2.png" alt="Adult Fundamentals" class ="program-icon">
+                        <img src="fundamentals2.png" alt="Adult Fundamentals" class="program-icon">
                         <h3>Adult Fundamentals</h3>
                         <p>Ages 13+. A 12-month cyclical curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. All ranks welcome.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="advanced.jpg" alt="Advanced Training" class ="program-icon">
+                        <img src="advanced.jpg" alt="Advanced Training" class="program-icon">
                         <h3>Advanced Training</h3>
                         <p>For students who've completed the Fundamentals curriculum. Competition preparation and advanced techniques.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="placeholder.jpg" alt="Private Lessons" class ="program-icon">
+                        <img src="placeholder.jpg" alt="Private Lessons" class="program-icon">
                         <h3>Private Lessons</h3>
                         <p>One-on-one training with Coach Quick. Accelerate your progress with personalized instruction.</p>
                         <a class="program-link" onclick="navigateTo('contact')">Inquire →</a>
@@ -892,7 +876,6 @@
             </div>
         </section>
 
-        <!-- Instructor Tease -->
         <section class="section section-dark" id="home-instructors">
             <div class="container">
                 <span class="section-eyebrow">Meet Your Coach</span>
@@ -911,10 +894,11 @@
             </div>
         </section>
 
-        <!-- CTA -->
         <section class="cta-section">
             <div class="container">
                 <h2>Ready to Start Your Journey?</h2>
+                <p>Join the most experienced Jiu-Jitsu academy in Southwest Florida.</p>
+                <a href="#trial" class="cta-btn" onclick="navigateTo('contact')">Get Started Today</a>
             </div>
         </section>
     </div>
@@ -1020,30 +1004,6 @@
                         <p style="margin-top: 1rem;"><a class="program-link" onclick="navigateTo('contact')">Contact for availability & pricing →</a></p>
                     </div>
                 </div>
-
-                <span class="section-eyebrow">Weekly Schedule</span>
-                <h2 class="section-title" style="margin-bottom: 1rem;">Class Times</h2>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>Time</th>
-                            <th>Class</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Monday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Monday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Tuesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Tuesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Wednesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Wednesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Thursday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Thursday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Saturday</td><td>10:00 AM - 11:30 AM</td><td>Open Mat / Comp Training</td><td class="nogi-class">No-Gi</td></tr>
-                    </tbody>
-                </table>
             </div>
         </section>
     </div>
@@ -1224,40 +1184,16 @@
         </section>
     </div>
 
-    <!-- Gymdesk Schedule Section (outside page containers) -->
-    <section id="gymdesk-section" class="section section-dark" style="display: none;">
+    <!-- Gymdesk Schedule Section (always visible on all pages) -->
+    <section id="gymdesk-section" class="section section-dark">
         <div class="container">
             <span class="section-eyebrow">Weekly Schedule</span>
             <h2 class="section-title">Class Times</h2>
-            <div id="gymdesk-widget" class="gymdesk-schedule"
+            <div class="gymdesk-schedule"
                  attr-gym="6aZaP"
                  attr-visible_schedule="all"
                  attr-default_schedule="all"
                  attr-program="all">
-            </div>
-            <!-- Fallback schedule (shown if Gymdesk doesn't load within 5 seconds) -->
-            <div id="schedule-fallback" style="display: none;">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>Time</th>
-                            <th>Class</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Monday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Monday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Tuesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Tuesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Wednesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Wednesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Thursday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Thursday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Saturday</td><td>10:00 AM - 11:30 AM</td><td>Open Mat / Comp Training</td><td class="nogi-class">No-Gi</td></tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -1291,7 +1227,6 @@
         const pages = document.querySelectorAll('.page');
         const navLinks = document.querySelectorAll('.nav-links a[data-page]');
 
-        // Nav scroll effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
@@ -1300,7 +1235,6 @@
             }
         });
 
-        // Navigation function
         function navigateTo(pageName) {
             pages.forEach(page => page.classList.remove('active'));
             const targetPage = document.getElementById('page-' + pageName);
@@ -1313,18 +1247,10 @@
                     link.classList.add('active');
                 }
             });
-            
-            // Show/hide Gymdesk schedule section based on page
-            const scheduleSection = document.getElementById('gymdesk-section');
-            if (scheduleSection) {
-                scheduleSection.style.display = (pageName === 'home') ? 'block' : 'none';
-            }
-            
             window.scrollTo({ top: 0, behavior: 'smooth' });
             window.location.hash = pageName;
         }
 
-        // Handle browser back/forward buttons
         window.addEventListener('hashchange', () => {
             const hash = window.location.hash.replace('#', '');
             if (hash && document.getElementById('page-' + hash)) {
@@ -1332,7 +1258,6 @@
             }
         });
 
-        // Initial page load based on URL hash
         if (window.location.hash) {
             const initialPage = window.location.hash.replace('#', '');
             if (document.getElementById('page-' + initialPage)) {
@@ -1340,50 +1265,12 @@
             }
         }
 
-        // Handle free trial links
         document.querySelectorAll('a[href="#trial"]').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 navigateTo('contact');
             });
         });
-
-        // Initialize schedule section visibility on page load
-        (function() {
-            const scheduleSection = document.getElementById('gymdesk-section');
-            if (scheduleSection) {
-                const hash = window.location.hash.replace('#', '');
-                if (!hash || hash === 'home') {
-                    scheduleSection.style.display = 'block';
-                }
-            }
-        })();
-
-        // Fallback: if Gymdesk doesn't render within 5 seconds, show static schedule
-        (function() {
-            const widget = document.getElementById('gymdesk-widget');
-            const fallback = document.getElementById('schedule-fallback');
-            
-            if (widget && fallback) {
-                // Check after 5 seconds if widget has content
-                setTimeout(() => {
-                    // Check if widget has rendered any children
-                    if (widget.children.length === 0 || widget.innerHTML.trim() === '') {
-                        widget.style.display = 'none';
-                        fallback.style.display = 'block';
-                    }
-                }, 5000);
-
-                // Also observe for successful load
-                const observer = new MutationObserver(() => {
-                    if (widget.children.length > 0) {
-                        fallback.style.display = 'none';
-                        observer.disconnect();
-                    }
-                });
-                observer.observe(widget, { childList: true, subtree: true });
-            }
-        })();
     </script>
 </body>
 </html>
