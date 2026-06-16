@@ -329,7 +329,7 @@
         .program-icon {
             width: 100%;
             height: 200px;
-            object-fit: cover;   /* crops instead of squishing */
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1.5rem;
             display: block;
@@ -355,7 +355,7 @@
             color: var(--blue-light);
         }
 
-        /* Schedule Table */
+        /* Schedule Table (fallback) */
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
@@ -714,6 +714,14 @@
             font-size: 1.2rem;
         }
 
+        /* Gymdesk Schedule Container */
+        .gymdesk-schedule {
+            min-height: 400px;
+            background: var(--black-alt);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
         /* Footer */
         footer {
             background: var(--black);
@@ -884,8 +892,6 @@
             </div>
         </section>
 
-
-
         <!-- Instructor Tease -->
         <section class="section section-dark" id="home-instructors">
             <div class="container">
@@ -1010,297 +1016,4 @@
                         <div class="program-icon">👤</div>
                         <h3>Private Lessons</h3>
                         <p><strong>All Ages & Levels</strong></p>
-                        <p style="margin-top: 1rem;">Accelerate your progress with one-on-one instruction from Coach Quick. Perfect for addressing specific weaknesses, preparing for competition, or getting up to speed quickly.</p>
-                        <p style="margin-top: 1rem;"><a class="program-link" onclick="navigateTo('contact')">Contact for availability & pricing →</a></p>
-                    </div>
-                </div>
-
-                <span class="section-eyebrow">Weekly Schedule</span>
-                <h2 class="section-title" style="margin-bottom: 1rem;">Class Times</h2>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>Time</th>
-                            <th>Class</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Monday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Monday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Tuesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Tuesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Wednesday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Wednesday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Thursday</td><td>5:00 PM - 6:15 PM</td><td>Youth Jiu-Jitsu</td><td class="kids-class">Kids</td></tr>
-                        <tr><td>Thursday</td><td>6:15 PM - 7:30 PM</td><td>Adult Fundamentals</td><td class="gi-class">Gi</td></tr>
-                        <tr><td>Saturday</td><td>10:00 AM - 11:30 AM</td><td>Open Mat / Comp Training</td><td class="nogi-class">No-Gi</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </div>
-
-    <!-- AFFILIATES PAGE -->
-    <div class="page" id="page-affiliates">
-        <section class="about-hero">
-            <div class="container">
-                <h1>Our <span class="blue">Network</span></h1>
-                <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">25 black belts and schools worldwide — united under the BQuickJJ banner.</p>
-            </div>
-        </section>
-
-        <section class="section section-black">
-            <div class="container">
-                <span class="section-eyebrow">Global Reach</span>
-                <h2 class="section-title">BQuickJJ Affiliates</h2>
-                <p class="section-subtitle">
-                    Coach Quick has 25 black belts and affiliated schools across the United States, Belgium, Trinidad &amp; Tobago, and Portugal. 
-                    Four of those black belts went through all of the kids ranks and adult ranks with Mr. Quick — two went on to fight MMA, and two wrestled collegiately.
-                </p>
-
-                <div class="affiliates-grid" style="margin-top: 3rem;">
-                    <div class="affiliate-card"><h4>Dallas, TX</h4><p>Flagship Affiliate</p></div>
-                    <div class="affiliate-card"><h4>Fort Worth, TX</h4><p>Affiliate School</p></div>
-                    <div class="affiliate-card"><h4>Palmetto, FL</h4><p>Headquarters</p></div>
-                    <div class="affiliate-card"><h4>Houston, TX</h4><p>Affiliate School</p></div>
-                    <div class="affiliate-card"><h4>Austin, TX</h4><p>Affiliate School</p></div>
-                    <div class="affiliate-card"><h4>Las Vegas, NV</h4><p>Affiliate School</p></div>
-                    <div class="affiliate-card"><h4>Brussels, Belgium</h4><p>International Affiliate</p></div>
-                    <div class="affiliate-card"><h4>Port of Spain, Trinidad</h4><p>International Affiliate</p></div>
-                    <div class="affiliate-card"><h4>Lisbon, Portugal</h4><p>International Affiliate</p></div>
-                </div>
-
-                <div style="margin-top: 4rem; text-align: center;">
-                    <span class="section-eyebrow">American Grappling Federation</span>
-                    <h2 class="section-title" style="margin-bottom: 1rem;">100+ Tournaments Per Year</h2>
-                    <p style="color: var(--gray); max-width: 700px; margin: 0 auto 2rem;">
-                        Coach Quick is co-owner of the American Grappling Federation, which conducts over 100 Jiu-Jitsu tournaments annually across the U.S. and Europe.
-                        BQuickJJ students have regular opportunities to test their skills in a safe, controlled competitive environment.
-                    </p>
-                    <a href="#" class="cta-btn" style="display: inline-block;">Visit AGF Website</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- PRICING PAGE -->
-    <div class="page" id="page-pricing">
-        <section class="about-hero">
-            <div class="container">
-                <h1>Membership <span class="blue">Pricing</span></h1>
-                <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Simple, transparent pricing. No hidden fees. No contracts.</p>
-            </div>
-        </section>
-
-        <section class="section section-black">
-            <div class="container" style="max-width: 1000px;">
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Youth Program</h3>
-                        <p style="color: var(--gray);">Ages 4-12</p>
-                        <div class="price">$175<span>/month</span></div>
-                        <ul>
-                            <li>Unlimited training (Mon-Thu)</li>
-                            <li>Longest youth classes in Tampa Bay</li>
-                            <li>Taught by 3rd degree black belt</li>
-                            <li>Self-defense & confidence building</li>
-                            <li>No contracts</li>
-                        </ul>
-                        <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
-                    </div>
-
-                    <div class="pricing-card featured">
-                        <h3>Adult Fundamentals</h3>
-                        <p style="color: var(--gray);">Ages 13+</p>
-                        <div class="price">$175<span>/month</span></div>
-                        <ul>
-                            <li>Unlimited training (Mon-Thu)</li>
-                            <li>12-month structured curriculum</li>
-                            <li>Jiu-Jitsu, Wrestling & Self-Defense</li>
-                            <li>All ranks welcome</li>
-                            <li>No contracts</li>
-                        </ul>
-                        <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <h3>Family Plan</h3>
-                        <p style="color: var(--gray);">Best for families</p>
-                        <div class="price">$425<span>/month</span></div>
-                        <ul>
-                            <li>Pay for 3, rest are FREE</li>
-                            <li>First member: $175</li>
-                            <li>Second member: $125</li>
-                            <li>Third member: $125</li>
-                            <li>All additional family members: FREE</li>
-                        </ul>
-                        <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
-                    </div>
-                </div>
-
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--black-alt); border-radius: 8px; border: 2px solid var(--blue); text-align: center;">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Heroes Discount</h3>
-                    <p style="color: var(--gray); font-size: 1.1rem;">
-                        <strong style="color: var(--white);">$50 OFF</strong> for Law Enforcement, Military, and First Responders
-                    </p>
-                    <p style="color: var(--gray); margin-top: 0.5rem;">
-                        <strong style="color: var(--blue);">$50 OFF</strong> for each additional family member ($125/month)
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- CONTACT PAGE -->
-    <div class="page" id="page-contact">
-        <section class="about-hero">
-            <div class="container">
-                <h1>Get <span class="blue">Started</span></h1>
-                <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Your first class is free. Come see what we're about.</p>
-            </div>
-        </section>
-
-        <section class="section section-black">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Visit Us</h3>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-detail">
-                                <strong>Address</strong>
-                                BQuickJJ<br>
-                                5304 U.S. Hwy 41, Palmetto, FL 34221<br>
-                                <span style="color: var(--gray);">(Full address coming soon)</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-detail">
-                                <strong>Phone</strong>
-                                (555) 123-4567<br>
-                                <span style="color: var(--gray);">Call or text for fastest response</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-detail">
-                                <strong>Email</strong>
-                                info@bquickjj.com
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🕐</div>
-                            <div class="contact-detail">
-                                <strong>Class Hours</strong>
-                                Mon-Thu: 5:00 PM - 7:30 PM<br>
-                                Sat: 10:00 AM - 11:30 AM<br>
-                                <span style="color: var(--blue); font-weight: 600;">First class is always FREE</span>
-                            </div>
-                        </div>
-                        <div style="margin-top: 2rem;">
-                            <a href="#" class="cta-btn" style="display: inline-block;">Call Now for Free Trial</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="map-placeholder">
-                            🗺️ Google Maps Embed<br>
-                            <span style="font-size: 0.9rem;">Palmetto, FL 34221</span>
-                        </div>
-                        <p style="color: var(--gray); margin-top: 1rem; text-align: center; font-size: 0.9rem;">
-                            Southwest Florida • Serving Palmetto, Bradenton, Ellenton, Parrish, and surrounding areas
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-logo">B<span>Quick</span>JJ</div>
-        <p style="margin-bottom: 0.5rem;">Palmetto, FL • Southwest Florida's Premier Jiu-Jitsu Academy</p>
-        <ul class="footer-links">
-            <li><a onclick="navigateTo('home')">Home</a></li>
-            <li><a onclick="navigateTo('about')">About</a></li>
-            <li><a onclick="navigateTo('programs')">Programs</a></li>
-            <li><a onclick="navigateTo('affiliates')">Affiliates</a></li>
-            <li><a onclick="navigateTo('pricing')">Pricing</a></li>
-            <li><a onclick="navigateTo('contact')">Contact</a></li>
-        </ul>
-        <p style="font-size: 0.85rem;">&copy; 2026 BQuickJJ. All rights reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem;">
-            <a href="#" style="color: var(--blue);">BJJFanatics: Half Guard</a> • 
-            <a href="#" style="color: var(--blue);">Fade to Black 2</a> • 
-            <a href="#" style="color: var(--blue);">Budovideos: Fade to Black 1</a> • 
-            <a href="#" style="color: var(--blue);">YouTube Channel</a>
-        </p>
-    </footer>
-
-    <script>
-        const nav = document.getElementById('navbar');
-        const pages = document.querySelectorAll('.page');
-        const navLinks = document.querySelectorAll('.nav-links a[data-page]');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        function navigateTo(pageName) {
-            pages.forEach(page => page.classList.remove('active'));
-            const targetPage = document.getElementById('page-' + pageName);
-            if (targetPage) {
-                targetPage.classList.add('active');
-            }
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('data-page') === pageName) {
-                    link.classList.add('active');
-                }
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            window.location.hash = pageName;
-        }
-
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.replace('#', '');
-            if (hash && document.getElementById('page-' + hash)) {
-                navigateTo(hash);
-            }
-        });
-
-        if (window.location.hash) {
-            const initialPage = window.location.hash.replace('#', '');
-            if (document.getElementById('page-' + initialPage)) {
-                navigateTo(initialPage);
-            }
-        }
-
-        document.querySelectorAll('a[href="#trial"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                navigateTo('contact');
-            });
-        });
-    </script>
-    <!-- Gymdesk Schedule - Always visible, placed at bottom -->
-    <section id="gymdesk-section" class="section section-dark">
-      <div class="container">
-        <span class="section-eyebrow">Weekly Schedule</span>
-        <h2 class="section-title">Class Times</h2>
-        <div class="gymdesk-schedule"
-             attr-gym="6aZaP"
-             attr-visible_schedule="all"
-             attr-default_schedule="all"
-             attr-program="all">
-        </div>
-      </div>
-    </section>
-</body>
-</html>
+                        <p style="margin-top: 1rem;">
