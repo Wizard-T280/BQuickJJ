@@ -794,6 +794,159 @@
         .fade-in {
             animation: fadeInUp 0.8s ease forwards;
         }
+                /* GymDesk Widget Styling */
+        .gymdesk-schedule {
+            margin: 3rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        
+        .gymdesk-schedule iframe,
+        .gymdesk-schedule .gymdesk-widget {
+            width: 100% !important;
+            min-height: 600px;
+            border: 2px solid var(--blue) !important;
+            border-radius: 8px !important;
+            background: var(--black-alt) !important;
+            box-shadow: 0 0 30px rgba(0, 68, 204, 0.1) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .gymdesk-schedule iframe:hover,
+        .gymdesk-schedule .gymdesk-widget:hover {
+            box-shadow: 0 0 50px rgba(0, 68, 204, 0.25) !important;
+            border-color: var(--blue-light) !important;
+        }
+        
+        /* If GymDesk uses a container div */
+        .gymdesk-schedule > div {
+            background: var(--black-alt);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 2px solid var(--gray-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .gymdesk-schedule > div:hover {
+            border-color: var(--blue);
+            box-shadow: 0 10px 40px rgba(0, 68, 204, 0.15);
+        }
+        
+        /* Style any text or labels inside the widget */
+        .gymdesk-schedule .gymdesk-label,
+        .gymdesk-schedule label {
+            color: var(--white) !important;
+            font-weight: 600 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        
+        .gymdesk-schedule .gymdesk-title {
+            color: var(--blue) !important;
+            font-size: 1.5rem !important;
+            font-weight: 800 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+        }
+        
+        /* Style class names/events */
+        .gymdesk-schedule .gymdesk-event,
+        .gymdesk-schedule .gymdesk-class {
+            background: var(--black) !important;
+            border-left: 3px solid var(--blue) !important;
+            padding: 0.8rem 1rem !important;
+            margin: 0.5rem 0 !important;
+            border-radius: 4px !important;
+            color: var(--white) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .gymdesk-schedule .gymdesk-event:hover,
+        .gymdesk-schedule .gymdesk-class:hover {
+            background: var(--gray-dark) !important;
+            border-left-color: var(--blue-light) !important;
+            transform: translateX(5px) !important;
+        }
+        
+        /* Style buttons inside widget */
+        .gymdesk-schedule button,
+        .gymdesk-schedule .gymdesk-button {
+            background: var(--blue) !important;
+            color: var(--white) !important;
+            border: none !important;
+            padding: 0.6rem 1.8rem !important;
+            font-weight: 700 !important;
+            clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%) !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        
+        .gymdesk-schedule button:hover,
+        .gymdesk-schedule .gymdesk-button:hover {
+            background: var(--blue-light) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px var(--blue-glow) !important;
+        }
+        
+        /* Scrollbar styling for widget */
+        .gymdesk-schedule ::-webkit-scrollbar {
+            width: 8px;
+            background: var(--black);
+        }
+        
+        .gymdesk-schedule ::-webkit-scrollbar-track {
+            background: var(--black-alt);
+            border-radius: 4px;
+        }
+        
+        .gymdesk-schedule ::-webkit-scrollbar-thumb {
+            background: var(--blue);
+            border-radius: 4px;
+        }
+        
+        .gymdesk-schedule ::-webkit-scrollbar-thumb:hover {
+            background: var(--blue-light);
+        }
+        
+        /* Loading state */
+        .gymdesk-schedule .gymdesk-loading {
+            color: var(--gray);
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .gymdesk-schedule .gymdesk-loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        
+        @keyframes dots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .gymdesk-schedule {
+                padding: 0 1rem;
+            }
+            
+            .gymdesk-schedule iframe,
+            .gymdesk-schedule .gymdesk-widget {
+                min-height: 500px !important;
+            }
+            
+            .gymdesk-schedule .gymdesk-title {
+                font-size: 1.2rem !important;
+            }
+            
+            .gymdesk-schedule > div {
+                padding: 1rem;
+            }
+        }
     </style>
     <script src="https://app.gymdesk.com/js/widgets.js"></script>
 </head>
