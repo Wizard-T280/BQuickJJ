@@ -131,8 +131,19 @@
             background-size: cover;
             background-position: center top;
             overflow: hidden;
+            min-height: 80vh;
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.5);
+            z-index: 1;
+        }
 
         .hero-watermark {
             position: absolute;
@@ -166,7 +177,7 @@
             line-height: 1;
             text-transform: uppercase;
             letter-spacing: -2px;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
         .hero h1 .blue {
             color: var(--blue);
@@ -323,7 +334,7 @@
         .program-icon {
             width: 100%;
             height: 200px;
-            object-fit: cover;   /* crops instead of squishing */
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1.5rem;
             display: block;
@@ -350,8 +361,8 @@
         }
 
         .ig-handle {
-          color: #0095f6 !important; /* Instagram's official blue */
-          font-weight: 500; /* Optional: makes it slightly bolder so it pops */
+          color: #0095f6 !important;
+          font-weight: 500;
         }
 
         /* Schedule Table */
@@ -753,6 +764,9 @@
             .hero h1 {
                 font-size: 3rem;
             }
+            .hero-content {
+                padding: 2rem 1.5rem;
+            }
             .hero-stats {
                 gap: 1.5rem;
             }
@@ -793,7 +807,8 @@
         .fade-in {
             animation: fadeInUp 0.8s ease forwards;
         }
-                /* GymDesk Widget Styling */
+        
+        /* GymDesk Widget Styling */
         .gymdesk-schedule {
             margin: 3rem auto;
             max-width: 1200px;
@@ -817,7 +832,6 @@
             border-color: var(--blue-light) !important;
         }
         
-        /* If GymDesk uses a container div */
         .gymdesk-schedule > div {
             background: var(--black-alt);
             border-radius: 8px;
@@ -831,7 +845,6 @@
             box-shadow: 0 10px 40px rgba(0, 68, 204, 0.15);
         }
         
-        /* Style any text or labels inside the widget */
         .gymdesk-schedule .gymdesk-label,
         .gymdesk-schedule label {
             color: var(--white) !important;
@@ -847,7 +860,6 @@
             letter-spacing: 1px !important;
         }
         
-        /* Style class names/events */
         .gymdesk-schedule .gymdesk-event,
         .gymdesk-schedule .gymdesk-class {
             background: var(--black) !important;
@@ -866,7 +878,6 @@
             transform: translateX(5px) !important;
         }
         
-        /* Style buttons inside widget */
         .gymdesk-schedule button,
         .gymdesk-schedule .gymdesk-button {
             background: var(--blue) !important;
@@ -887,7 +898,6 @@
             box-shadow: 0 8px 25px var(--blue-glow) !important;
         }
         
-        /* Scrollbar styling for widget */
         .gymdesk-schedule ::-webkit-scrollbar {
             width: 8px;
             background: var(--black);
@@ -907,7 +917,6 @@
             background: var(--blue-light);
         }
         
-        /* Loading state */
         .gymdesk-schedule .gymdesk-loading {
             color: var(--gray);
             text-align: center;
@@ -927,7 +936,6 @@
             75% { content: '...'; }
         }
         
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .gymdesk-schedule {
                 padding: 0 1rem;
@@ -976,10 +984,21 @@
                     <span class="blue">BQuickJJ</span><br>
                     <span class="blue-light">Palmetto, FL</span>
                 </h1>
-                <p class="hero-subtitle">
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#141414" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Hero Content Below Image -->
+        <section class="section section-dark" style="padding-top: 3rem; padding-bottom: 3rem;">
+            <div class="container" style="text-align: center;">
+                <p class="hero-subtitle" style="font-size: 1.4rem; color: var(--white); margin-bottom: 2.5rem; font-weight: 400; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
                     Train with a 4th Degree Black Belt • Army Combat Veteran • UFC Fighter Coach
                 </p>
-                <div class="hero-stats">
+                <div class="hero-stats" style="display: flex; gap: 3rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
                     <div class="stat">
                         <div class="stat-number">30+</div>
                         <div class="stat-label">Years Experience</div>
@@ -992,12 +1011,7 @@
                         <div class="stat-label">UFC Fighter Coach</div>
                     </div>
                 </div>
-                <a href="#trial" class="hero-cta" onclick="navigateTo('contact')">Start Your Free Trial</a>
-            </div>
-            <div class="hero-wave">
-                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                    <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#141414" />
-                </svg>
+                <a href="#trial" class="hero-cta" onclick="navigateTo('contact')" style="display: inline-block; background: var(--blue); color: var(--white); padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%); transition: all 0.3s; border: none; cursor: pointer;">Start Your Free Trial</a>
             </div>
         </section>
 
@@ -1009,25 +1023,25 @@
                 <p class="section-subtitle">From youth beginners to professional fighters — we have a program designed for you.</p>
                 <div class="programs-grid">
                     <div class="program-card">
-                        <img src="brandon_with_kids_2.jpg" alt="Youth Jiu-Jitsu" class ="program-icon">
+                        <img src="brandon_with_kids_2.jpg" alt="Youth Jiu-Jitsu" class="program-icon">
                         <h3>Youth Jiu-Jitsu</h3>
                         <p>Ages 4-12. The longest youth classes in Tampa Bay, taught by a 4th degree black belt. Building confidence, discipline, and real self-defense skills.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="rolling.jpg" alt="Adult Fundamentals" class ="program-icon">
+                        <img src="rolling.jpg" alt="Adult Fundamentals" class="program-icon">
                         <h3>Adult Fundamentals</h3>
                         <p>Ages 13+. A 12-month cyclical curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. All ranks welcome.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="advanced.jpg" alt="Advanced Training" class ="program-icon" style="margin-top: 20px;">
+                        <img src="advanced.jpg" alt="Advanced Training" class="program-icon" style="margin-top: 20px;">
                         <h3>Advanced Training</h3>
                         <p>For students who've completed the Fundamentals curriculum. Competition preparation and advanced techniques.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="32B551F3-6BB4-48EC-93D0-2AD6927624C7.jpg" alt="Private Lessons" class ="program-icon">
+                        <img src="32B551F3-6BB4-48EC-93D0-2AD6927624C7.jpg" alt="Private Lessons" class="program-icon">
                         <h3>Private Lessons</h3>
                         <p>One-on-one training with Coach Quick. Accelerate your progress with personalized instruction.</p>
                         <a class="program-link" onclick="navigateTo('contact')">Inquire →</a>
@@ -1043,7 +1057,7 @@
                 <h2 class="section-title">World-Class Instruction</h2>
                 <div class="instructors-grid">
                     <div class="instructor-card" style="max-width: 500px; margin: 0 auto;">
-                        <img src="AB8E166F-9FE7-4E7C-865B-2DEC5B17BF45.jpg"></div>
+                        <img src="AB8E166F-9FE7-4E7C-865B-2DEC5B17BF45.jpg" alt="Brandon Quick" style="width: 100%;">
                         <div class="instructor-info">
                             <h3>Brandon Quick</h3>
                             <span class="instructor-badge">4th Degree Black Belt</span>
@@ -1152,6 +1166,7 @@
                         <p style="margin-top: 1rem;"><a class="program-link" onclick="navigateTo('contact')">Contact for availability & pricing →</a></p>
                     </div>
                 </div>
+            </div>
         </section>
     </div>
 
@@ -1168,47 +1183,48 @@
                 <span class="section-eyebrow">Global Reach</span>
                 <h2 class="section-title">BQuickJJ Affiliates</h2>
 
-        <div class="affiliates-grid" style="margin-top: 3rem;">
-            <a href="https://www.instagram.com/fitnessfightfactory" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Fitness Fight Factory</h4><p>North Richland Hills, TX 🇺🇸</p><p class="ig-handle">@fitnessfightfactory</p></div>
-            </a>
-            <a href="https://www.instagram.com/fitnessfightfactory_haslet" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Fitness Fight Factory</h4><p>Haslet, TX 🇺🇸</p><p class="ig-handle">@fitnessfightfactory_haslet</p></div>
-            </a>
-            <a href="https://www.instagram.com/fortifiedfitness_wptx" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Fortified Fitness</h4><p>Aledom, TX 🇺🇸</p><p class="ig-handle">@fortifiedfitness_wptx</p></div>
-            </a>
-            <a href="https://www.instagram.com/maksym_agf" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Legion</h4><p>Wlocławek 🇵🇱</p><p class="ig-handle">@maksym_agf</p></div>
-            </a>
-            <a href="https://www.instagram.com/invictus_trainingcenter" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Invictus</h4><p>Ronse 🇧🇪</p><p class="ig-handle">@invictus_trainingcenter</p></div>
-            </a>
-            <a href="https://www.instagram.com/invictuswaregem" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Invictus</h4><p>Waregem 🇧🇪</p><p class="ig-handle">@invictuswaregem</p></div>
-            </a>
-            <a href="https://www.instagram.com/conquerajj" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Conquer</h4><p>Ada, OK 🇺🇸</p><p class="ig-handle">@conquerajj</p></div>
-            </a>
-            <a href="https://www.instagram.com/conquerajj" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Blue Jitsu</h4><p>Las Vegas, NV 🇺🇸</p><p class="ig-handle">@conquerajj</p></div>
-            </a>
-            <a href="https://www.instagram.com/team_515_lgv" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Team 515</h4><p>Longview, TX 🇺🇸</p><p class="ig-handle">@team_515_lgv</p></div>
-            </a>
-            <a href="https://www.instagram.com/grappling.kings" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Grappling Kings</h4><p>Beringen 🇧🇪</p><p class="ig-handle">@grappling.kings</p></div>
-            </a>
-            <a href="https://www.instagram.com/thunderkickgym" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Thunderkick</h4><p>Tulsa, OK 🇺🇸</p><p class="ig-handle">@thunderkickgym</p></div>
-            </a>
-            <a href="https://www.instagram.com/mma_knuckleheads" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>Knuckleheads</h4><p>Funchal, Madeira 🇵🇹</p><p class="ig-handle">@mma_knuckleheads</p></div>
-            </a>
-            <a href="https://www.instagram.com/bquickjj" style="text-decoration: none; color: inherit;">
-                <div class="affiliate-card"><h4>BQuick HQ</h4><p>Palmetto, FL 🇺🇸</p><p class="ig-handle">@bquickjj</p></div>
-            </a>
-        </div>
+                <div class="affiliates-grid" style="margin-top: 3rem;">
+                    <a href="https://www.instagram.com/fitnessfightfactory" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Fitness Fight Factory</h4><p>North Richland Hills, TX 🇺🇸</p><p class="ig-handle">@fitnessfightfactory</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/fitnessfightfactory_haslet" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Fitness Fight Factory</h4><p>Haslet, TX 🇺🇸</p><p class="ig-handle">@fitnessfightfactory_haslet</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/fortifiedfitness_wptx" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Fortified Fitness</h4><p>Aledom, TX 🇺🇸</p><p class="ig-handle">@fortifiedfitness_wptx</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/maksym_agf" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Legion</h4><p>Wlocławek 🇵🇱</p><p class="ig-handle">@maksym_agf</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/invictus_trainingcenter" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Invictus</h4><p>Ronse 🇧🇪</p><p class="ig-handle">@invictus_trainingcenter</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/invictuswaregem" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Invictus</h4><p>Waregem 🇧🇪</p><p class="ig-handle">@invictuswaregem</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/conquerajj" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Conquer</h4><p>Ada, OK 🇺🇸</p><p class="ig-handle">@conquerajj</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/conquerajj" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Blue Jitsu</h4><p>Las Vegas, NV 🇺🇸</p><p class="ig-handle">@conquerajj</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/team_515_lgv" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Team 515</h4><p>Longview, TX 🇺🇸</p><p class="ig-handle">@team_515_lgv</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/grappling.kings" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Grappling Kings</h4><p>Beringen 🇧🇪</p><p class="ig-handle">@grappling.kings</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/thunderkickgym" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Thunderkick</h4><p>Tulsa, OK 🇺🇸</p><p class="ig-handle">@thunderkickgym</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/mma_knuckleheads" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>Knuckleheads</h4><p>Funchal, Madeira 🇵🇹</p><p class="ig-handle">@mma_knuckleheads</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/bquickjj" style="text-decoration: none; color: inherit;">
+                        <div class="affiliate-card"><h4>BQuick HQ</h4><p>Palmetto, FL 🇺🇸</p><p class="ig-handle">@bquickjj</p></div>
+                    </a>
+                </div>
+                
                 <div style="margin-top: 4rem; text-align: center;">
                     <span class="section-eyebrow">American Grappling Federation</span>
                     <h2 class="section-title" style="margin-bottom: 1rem;">100+ Tournaments Per Year</h2>
@@ -1284,61 +1300,61 @@
         </section>
     </div>
 
-<!-- CONTACT PAGE -->
-<div class="page" id="page-contact">
-    <section class="about-hero">
-        <div class="container">
-            <h1>Get <span class="blue">Started</span></h1>
-            <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Your first class is free. Come see what we're about.</p>
-        </div>
-    </section>
+    <!-- CONTACT PAGE -->
+    <div class="page" id="page-contact">
+        <section class="about-hero">
+            <div class="container">
+                <h1>Get <span class="blue">Started</span></h1>
+                <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">Your first class is free. Come see what we're about.</p>
+            </div>
+        </section>
 
-    <section class="section section-black">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Visit Us</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-detail">
-                            <strong>Address</strong><br>
-                            BQuickJJ Brazilian Jiu-Jitsu<br>
-                            5304 U.S. Hwy 41, Palmetto, FL 34221
+        <section class="section section-black">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Visit Us</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-detail">
+                                <strong>Address</strong><br>
+                                BQuickJJ Brazilian Jiu-Jitsu<br>
+                                5304 U.S. Hwy 41, Palmetto, FL 34221
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div class="contact-detail">
-                            <strong>Phone</strong><br>
-                            <a href="tel:5551234567" style="color: inherit; text-decoration: none;">(555) 123-4567</a>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-detail">
+                                <strong>Phone</strong><br>
+                                <a href="tel:5551234567" style="color: inherit; text-decoration: none;">(555) 123-4567</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div class="contact-detail">
-                            <strong>Email</strong><br>
-                            <a href="mailto:info@bquickjj.com" style="color: inherit; text-decoration: none;">info@bquickjj.com</a>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-detail">
+                                <strong>Email</strong><br>
+                                <a href="mailto:info@bquickjj.com" style="color: inherit; text-decoration: none;">info@bquickjj.com</a>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <a href="tel:5551234567" class="cta-btn" style="display: inline-block;">📞 Call Now for Free Trial</a>
                         </div>
                     </div>
                     
-                    <div style="margin-top: 2rem;">
-                        <a href="tel:5551234567" class="cta-btn" style="display: inline-block;">📞 Call Now for Free Trial</a>
+                    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius: 12px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18947.3250639733!2d-82.57096844371863!3d27.561563673375726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c32298a031f62b%3A0xf5b6052c3d9c0a6b!2s5304%20US-41%2C%20Palmetto%2C%20FL%2034221!5e0!3m2!1sen!2sus!4v1783372726547!5m2!1sen!2sus" 
+                            style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
                     </div>
                 </div>
-                
-                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius: 12px;">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18947.3250639733!2d-82.57096844371863!3d27.561563673375726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c32298a031f62b%3A0xf5b6052c3d9c0a6b!2s5304%20US-41%2C%20Palmetto%2C%20FL%2034221!5e0!3m2!1sen!2sus!4v1783372726547!5m2!1sen!2sus" 
-                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
-                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
     <!-- gymdesk schedule -->
     <div class="gymdesk-schedule" attr-gym="6aZaP"></div>
