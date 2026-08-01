@@ -557,7 +557,7 @@
         /* Pricing Cards */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
         .pricing-card {
@@ -1005,6 +1005,7 @@
             <li><a onclick="navigateTo('home')" class="active" data-page="home">Home</a></li>
             <li><a onclick="navigateTo('about')" data-page="about">About</a></li>
             <li><a onclick="navigateTo('programs')" data-page="programs">Programs</a></li>
+            <li><a onclick="navigateTo('coaches')" data-page="coaches">Coaches</a></li>
             <li><a onclick="navigateTo('affiliates')" data-page="affiliates">Affiliates</a></li>
             <li><a onclick="navigateTo('pricing')" data-page="pricing">Pricing</a></li>
             <li><a onclick="navigateTo('contact')" data-page="contact">Contact / Schedule</a></li>
@@ -1067,15 +1068,27 @@
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="rolling.jpg" alt="Adult Fundamentals" class="program-icon">
-                        <h3>Adult Fundamentals</h3>
-                        <p>Ages 13+. A 12-month cyclical curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. All ranks welcome.</p>
+                        <img src="rolling.jpg" alt="Adult Jiu-Jitsu & Wrestling" class="program-icon">
+                        <h3>Adult Jiu-Jitsu + Wrestling</h3>
+                        <p><strong>Ages 13+ • All Levels</strong></p>
+                        <p style="margin-top: 1rem;">A complete martial arts curriculum combining Jiu-Jitsu and Wrestling. The first 12 months follow a structured Fundamentals Curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. This is a 12-month cyclical program for beginners, but all ranks are welcome.</p>
+                        <p><strong>Wrestling is included with your Jiu-Jitsu membership — no extra cost!</strong></p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
-                        <img src="brandon_competition.jpg" alt="Advanced Training" class="program-icon">
-                        <h3>Advanced Training</h3>
-                        <p>For students who've completed the Fundamentals curriculum. Competition preparation and advanced techniques.</p>
+                        <img src="brandon_competition.jpg" alt="MMA Training" class="program-icon" style="object-position: top;">
+                        <h3>MMA Program</h3>
+                        <p><strong>Ages 13+ • 3 Days Per Week</strong></p>
+                        <p style="margin-top: 1rem;">Train MMA with world-class coaching. Our MMA program blends Jiu-Jitsu, Wrestling, and Striking into a comprehensive combat sports curriculum.</p>
+                        <p><strong>$125/month</strong> — or <strong>$50/month</strong> when added to your Jiu-Jitsu membership.</p>
+                        <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
+                    </div>
+                    <div class="program-card">
+                        <img src="brandon_competition.jpg" alt="Advanced Training" class="program-icon" style="object-position: top;">
+                        <h3>Advanced / Competition Training</h3>
+                        <p><strong>By Invitation</strong></p>
+                        <p style="margin-top: 1rem;">For students who've completed the Fundamentals curriculum. Advanced techniques in Jiu-Jitsu, Wrestling, and MMA, competition preparation, and specialized training for those ready to take the next step.</p>
+                        <p>Competition tests one's ability in a safe, controlled environment and creates lifelong positive health habits and experiences.</p>
                         <a class="program-link" onclick="navigateTo('programs')">Learn More →</a>
                     </div>
                     <div class="program-card">
@@ -1091,16 +1104,25 @@
         <!-- Instructor Tease -->
         <section class="section section-dark" id="home-instructors">
             <div class="container">
-                <span class="section-eyebrow">Meet Your Coach</span>
+                <span class="section-eyebrow">Meet Your Coaches</span>
                 <h2 class="section-title">World-Class Instruction</h2>
                 <div class="instructors-grid">
-                    <div class="instructor-card" style="max-width: 500px; margin: 0 auto;">
-                        <img src="brandon_victory.jpg" alt="Brandon Quick" style="width: 100%;">
+                    <div class="instructor-card">
+                        <img src="brandon_victory.jpg" alt="Brandon Quick" style="width: 100%; height: 300px; object-fit: cover;">
                         <div class="instructor-info">
                             <h3>Brandon Quick</h3>
                             <span class="instructor-badge">4th Degree Black Belt</span>
                             <p>Army Combat Veteran • UFC Fighter Coach • 30+ Years in Martial Arts • Co-Owner of the American Grappling Federation</p>
-                            <a class="program-link" onclick="navigateTo('about')" style="display: inline-block; margin-top: 1rem;">Read Full Bio →</a>
+                            <a class="program-link" onclick="navigateTo('coaches')" style="display: inline-block; margin-top: 1rem;">Read Full Bio →</a>
+                        </div>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="coach_isaac.jpg" alt="Isaac Riley" style="width: 100%; height: 300px; object-fit: cover; background: var(--gray-dark);">
+                        <div class="instructor-info">
+                            <h3>Isaac Riley</h3>
+                            <span class="instructor-badge">Wrestling & MMA Coach</span>
+                            <p>2× FHSAA State Placer • 2× High School All-American • West Point Combatives Instructor • 20+ Years of Wrestling & Martial Arts Experience</p>
+                            <a class="program-link" onclick="navigateTo('coaches')" style="display: inline-block; margin-top: 1rem;">Read Full Bio →</a>
                         </div>
                     </div>
                 </div>
@@ -1176,6 +1198,93 @@
         </section>
     </div>
 
+    <!-- COACHES PAGE -->
+    <div class="page" id="page-coaches">
+        <section class="about-hero">
+            <div class="container">
+                <h1>Our <span class="blue">Coaches</span></h1>
+                <p style="color: var(--gray); font-size: 1.2rem; margin-top: 1rem;">World-class instruction from proven professionals.</p>
+            </div>
+        </section>
+
+        <!-- Coach Quick -->
+        <section class="section section-black">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img-wrapper" style="width: 100%; border-radius: 8px; border: 2px solid var(--blue); overflow: hidden; background: var(--gray-dark);">
+                        <img src="brandon_with_wife_2.jpg" alt="Coach Brandon Quick - 4th Degree Black Belt" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem;">Brandon <span class="blue">Quick</span></h2>
+                        <span class="instructor-badge" style="font-size: 1rem; padding: 0.5rem 1.2rem;">4th Degree Black Belt</span>
+                        <p style="color: var(--gray); margin: 1.5rem 0;">
+                            "While the sport of Jiu-Jitsu has skyrocketed, many schools have lost the combative self-defense aspect that is the foundation of Jiu-Jitsu. At BQuick Jiu-Jitsu, the focus is always to survive and dominate an altercation."
+                        </p>
+                        <ul class="checklist">
+                            <li>4th Degree Jiu-Jitsu Black Belt</li>
+                            <li>Army Combat Veteran — Invading Year of Iraq 2003-2004</li>
+                            <li>Coach to UFC Fighters (4 UFC veterans in the BQuickJJ network)</li>
+                            <li>Co-Owner of the American Grappling Federation (100+ tournaments/year)</li>
+                            <li>30 Black Belts produced and affiliated worldwide</li>
+                            <li>Instructional videos on BJJFanatics & Budovideos</li>
+                            <li>Over 1 million watch hours on YouTube</li>
+                            <li>Relocated to Florida in 2020</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coach Isaac Riley -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="about-grid" style="margin-top: 2rem;">
+                    <div class="about-img-wrapper" style="width: 100%; border-radius: 8px; border: 2px solid var(--blue); overflow: hidden; background: var(--gray-dark); min-height: 400px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 1.2rem;">
+                        <img src="coach_isaac.jpg" alt="Coach Isaac Riley - Wrestling & MMA Coach" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem;">Isaac <span class="blue">Riley</span></h2>
+                        <span class="instructor-badge" style="font-size: 1rem; padding: 0.5rem 1.2rem; background: var(--blue-light); color: var(--black);">Wrestling & MMA Coach</span>
+                        <p class="about-quote" style="font-size: 1.4rem; margin: 1.5rem 0;">
+                            "I will either find a way or make one."
+                        </p>
+                        <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                            Coach Isaac Riley began his martial arts journey in Taekwondo at six years old, training until the age of ten. He then transitioned into wrestling, competing with Manatee Wrestling Club before continuing his career at Manatee High School, where he established himself as one of Florida's top wrestlers.
+                        </p>
+                        <ul class="checklist">
+                            <li><strong>High School Record:</strong> 127-24</li>
+                            <li>2× FHSAA District Champion</li>
+                            <li>2× FHSAA Regional Champion</li>
+                            <li>2× FHSAA State Placer — 3rd Place (2008), 5th Place (2009)</li>
+                            <li>2× High School All-American</li>
+                            <li>NHSCA 8th Place (2007)</li>
+                            <li>AAU Silver Medalist (2009)</li>
+                            <li>West Point Army Combatives Level I & II Instructor</li>
+                            <li>Coaching amateur and professional MMA athletes since 2015</li>
+                        </ul>
+                        <p style="color: var(--gray); margin-top: 1.5rem;">
+                            During his junior year of high school, Isaac began training in Kickboxing and Brazilian Jiu-Jitsu while continuing his wrestling career. Following graduation, he accepted a nomination to the United States Military Academy at West Point, where he trained with the Army Combatives Program and earned certifications as both a Level I and Level II Army Combatives Instructor. He remained active with the academy's Combatives Club until a career-ending injury led to his medical retirement in 2012.
+                        </p>
+                        <p style="color: var(--gray); margin-top: 1rem;">
+                            After returning home, Isaac dedicated himself to giving back to the local wrestling community by coaching athletes and officiating wrestling competitions. Since 2015, he has focused on coaching both amateur and professional MMA athletes, earning a reputation for fundamentally sound technique, intelligent game planning, and elite-level conditioning.
+                        </p>
+                        <p style="color: var(--gray); margin-top: 1rem; font-weight: 700;">
+                            Today, Coach Isaac brings over two decades of wrestling and martial arts experience to every class, helping students of all ages build confidence, discipline, and the skills needed to succeed both on and off the mats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Train With Our <span class="blue">Championship</span> Coaches</h2>
+                <p>Experience the difference of coaching from proven professionals with decades of combined experience.</p>
+                <a href="#trial" class="cta-btn" onclick="navigateTo('contact')">Get Started Today</a>
+            </div>
+        </section>
+    </div>
+
     <!-- PROGRAMS PAGE -->
     <div class="page" id="page-programs">
         <section class="about-hero">
@@ -1196,23 +1305,31 @@
                     </div>
                     <div class="program-card">
                         <img src="rolling.jpg" class="program-icon">
-                        <h3>Adult Jiu-Jitsu Fundamentals</h3>
+                        <h3>Adult Jiu-Jitsu + Wrestling</h3>
                         <p><strong>Ages 13+ • All Levels</strong></p>
-                        <p style="margin-top: 1rem;">The first 12 months follow a structured Fundamentals Curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. This is a 12-month cyclical program for beginners, but all ranks are welcome.</p>
-                        <p>After completing 12 months, students can comprehend basic Jiu-Jitsu movements, handle an opponent throwing strikes, and progress to advanced classes.</p>
+                        <p style="margin-top: 1rem;">A complete martial arts curriculum combining Jiu-Jitsu and Wrestling. The first 12 months follow a structured Fundamentals Curriculum covering Jiu-Jitsu, Wrestling, and Self-Defense. This is a 12-month cyclical program for beginners, but all ranks are welcome.</p>
+                        <p><strong>Wrestling is included with your Jiu-Jitsu membership — no extra cost!</strong></p>
+                        <p style="margin-top: 0.5rem;">After completing 12 months, students can comprehend basic Jiu-Jitsu movements, handle an opponent throwing strikes, and progress to advanced classes.</p>
+                    </div>
+                    <div class="program-card">
+                        <img src="brandon_competition.jpg" class="program-icon" style="object-position: top;">
+                        <h3>MMA Program</h3>
+                        <p><strong>Ages 13+ • 3 Days Per Week</strong></p>
+                        <p style="margin-top: 1rem;">Train MMA with world-class coaching. Our MMA program blends Jiu-Jitsu, Wrestling, and Striking into a comprehensive combat sports curriculum taught by Coach Isaac Riley.</p>
+                        <p><strong>$125/month</strong> — or <strong>$50/month</strong> when added to your Jiu-Jitsu membership.</p>
                     </div>
                     <div class="program-card">
                         <img src="brandon_competition.jpg" class="program-icon" style="object-position: top;">
                         <h3>Advanced / Competition Training</h3>
                         <p><strong>By Invitation</strong></p>
-                        <p style="margin-top: 1rem;">For students who've completed the Fundamentals curriculum. Advanced techniques, competition preparation, and specialized training for those ready to take the next step.</p>
+                        <p style="margin-top: 1rem;">For students who've completed the Fundamentals curriculum. Advanced techniques in Jiu-Jitsu, Wrestling, and MMA, competition preparation, and specialized training for those ready to take the next step.</p>
                         <p>Competition tests one's ability in a safe, controlled environment and creates lifelong positive health habits and experiences.</p>
                     </div>
                     <div class="program-card">
                         <img src="Brandon_with_wife.jpg" class="program-icon">
                         <h3>Private Lessons</h3>
                         <p><strong>All Ages & Levels</strong></p>
-                        <p style="margin-top: 1rem;">Accelerate your progress with one-on-one instruction from Coach Quick. Perfect for addressing specific weaknesses, preparing for competition, or getting up to speed quickly.</p>
+                        <p style="margin-top: 1rem;">Accelerate your progress with one-on-one instruction from Coach Quick or Coach Riley. Perfect for addressing specific weaknesses, preparing for competition, or getting up to speed quickly.</p>
                         <p style="margin-top: 1rem;"><a class="program-link" onclick="navigateTo('contact')">Contact for availability & pricing →</a></p>
                     </div>
                 </div>
@@ -1316,20 +1433,47 @@
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
 
-                    <div class="pricing-card">
-                        <h3>Adult Fundamentals</h3>
-                        <p style="color: var(--gray);">Ages 13+</p>
+                    <div class="pricing-card featured">
+                        <h3>Jiu-Jitsu + Wrestling</h3>
+                        <p style="color: var(--gray);">Ages 13+ • All Levels</p>
                         <div class="price">$150<span>/month</span></div>
                         <ul>
                             <li>12-month structured curriculum</li>
                             <li>Jiu-Jitsu, Wrestling & Self-Defense</li>
+                            <li><strong>Wrestling included at no extra cost</strong></li>
                             <li>All ranks welcome</li>
                             <li>No contracts</li>
                         </ul>
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
 
-                    <div class="pricing-card featured">
+                    <div class="pricing-card">
+                        <h3>MMA Program</h3>
+                        <p style="color: var(--gray);">3 Days Per Week</p>
+                        <div class="price">$125<span>/month</span></div>
+                        <ul>
+                            <li>Standalone MMA membership</li>
+                            <li>Jiu-Jitsu + Wrestling + Striking</li>
+                            <li>Professional coaching</li>
+                            <li>No contracts</li>
+                        </ul>
+                        <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card" style="border-color: var(--blue-light);">
+                        <h3>Jiu-Jitsu + MMA</h3>
+                        <p style="color: var(--gray);">Best Value — Add MMA to Your Membership</p>
+                        <div class="price" style="color: var(--blue-light);">$200<span>/month</span></div>
+                        <ul>
+                            <li>Full Jiu-Jitsu + Wrestling program: $150</li>
+                            <li><strong>Add MMA for only $50 more</strong></li>
+                            <li>Complete combat sports training</li>
+                            <li>No contracts</li>
+                        </ul>
+                        <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')" style="background: var(--blue-light); color: var(--black);">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card">
                         <h3>Family Plan</h3>
                         <p style="color: var(--gray);">Best for families</p>
                         <div class="price">$375<span>/month</span></div>
@@ -1338,6 +1482,7 @@
                             <li>Second member: $125 ($275)</li>
                             <li>Third member: $100 ($375)</li>
                             <li>All additional family members: FREE</li>
+                            <li><strong>Add MMA for $50/member</strong></li>
                         </ul>
                         <a href="#trial" class="pricing-btn" onclick="navigateTo('contact')">Get Started</a>
                     </div>
@@ -1418,6 +1563,7 @@
         <ul class="footer-links">
             <li><a onclick="navigateTo('home')">Home</a></li>
             <li><a onclick="navigateTo('about')">About</a></li>
+            <li><a onclick="navigateTo('coaches')">Coaches</a></li>
             <li><a onclick="navigateTo('programs')">Programs</a></li>
             <li><a onclick="navigateTo('affiliates')">Affiliates</a></li>
             <li><a onclick="navigateTo('pricing')">Pricing</a></li>
